@@ -1,9 +1,15 @@
-window.alert('こんにちは世界！');
-console.log('こんにちは世界！');
-document.getElementById('choice').textContent = new Date();
-var result = window.confirm('準備ok?');
-if(result){
-  document.getElementById('choice').textContent = 'okが押されました';
+var number = math.floor(math.random()*3);
+var answer = parseInt(window.prompt('数あてゲーム。０～２の数字を入力してください！'));
+
+var message;
+if(answer === number){
+  message = 'あたり!';
+}else if(answer < number){
+  message = '残念!大きいです';
+}else if(answer  number){
+  message = '残念！小さいです';
 }else{
-  document.getElementById('choice').textContent = 'キャンセルが押されました';
+  message = '0~3の数字を入力してください';
 }
+
+docment.getElementById('choice').textContent = message;
